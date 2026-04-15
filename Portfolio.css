@@ -359,10 +359,16 @@ color: var(--laranja);
 @media(min-width: 769px) and (max-width: 1024px){
     #home{
         flex-direction: column;
-        text-align: left;
+        text-align: center;
     }
     .home-texto h1{
-        font-size: 2.8em;
+        font-size: 2.5em;
+    }
+    .home-texto h2{
+        font-size: 2em;
+    }
+    .home-texto p{
+        font-size: 1.1em;
     }
     #sobre{
         padding: 0.5rem;
