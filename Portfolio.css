@@ -1,0 +1,380 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Saira+Stencil+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --laranja: #FF9800;
+    --azul:#00CED1
+}
+
+body{
+    background-color: black;
+    color: white;
+    font-family: "Open Sans", sans-serif;
+   
+   
+}
+
+header a{
+    text-decoration: none;
+    color: var(--laranja);
+    
+}
+header a:hover{
+    color: var(--azul);
+    text-shadow: 0px 0px 10px var(--azul);
+  
+}
+
+header li{
+    list-style: none;
+    font-size: 1.5em;
+    font-family: "Lilita One", sans-serif;
+}
+
+#logo{
+    max-width: 100px;
+    transition: transform 1s ease;
+    cursor:pointer;
+    
+}
+
+#logo:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 15px var(--laranja);
+    border-radius: 50%;
+
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 3rem;
+    align-items: center;
+   
+}
+
+.menu{
+    display: flex;
+    gap: 2.5rem;
+    letter-spacing: 2px;
+}
+
+
+
+#foto-perfil{
+    width: 500px;
+    height: 55vh;
+    border-radius: 50%;
+    box-shadow: 0px 0px 8px var(--laranja);
+    transition: transform 1s ease;
+}
+
+
+#foto-perfil:hover{
+transform: translateY(-10px);
+box-shadow: 0px 0px 15px var(--laranja);
+
+
+}
+
+header{
+    position: sticky;
+    top: 0;
+    background-color: black;
+    z-index: 1;
+}
+.home-texto{
+ letter-spacing: 1px;
+ margin: 3em 5rem;
+}
+
+#home{
+    display: flex;
+    align-items: center;
+    margin: 4rem 4rem;
+   
+}
+.home-texto h1{
+    font-size: 3.3em;
+    white-space: nowrap;
+    margin-bottom: 2.5rem;
+}
+h1{
+     font-family: "Rock Salt", cursive;
+}
+
+
+.home-texto h2{
+    font-size: 2em;
+    margin-bottom:1rem;
+    min-width: 250px;
+}
+.home-texto h2::after{
+    content: "";
+    animation: profissao 6s infinite;
+    color: var(--azul);
+}
+
+@keyframes profissao{
+    0%,25%{
+        content:"Estudante de Matemática"
+      
+    }
+    26%,50%{
+        content: "Desenvolvedor FullStack Jr";
+    }
+    51%,75%{
+         content:"Estudante de Matemática"
+    }
+    76%,100%{
+         content: "Desenvolvedor FullStack Jr";
+    }
+}
+.home-texto p{
+    font-size: 1.3em;
+    line-height: 2.5rem;
+}
+
+h1 span{
+    color: var(--laranja);
+}
+
+h2 span{
+    color: var(--azul);
+}
+
+.redes-sociais a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.4rem;
+    height: 2.4rem;
+    background-color: transparent;
+    border: 3px solid var(--laranja);
+    font-size: 1.5rem;
+    border-radius: 50%;
+    margin: 1.2rem 0.7rem 3rem 0;
+    transition: 0.5s ease;
+    color: var(--laranja);
+    text-decoration: none;
+}
+
+.redes-sociais a:hover{
+    color: black;
+    transform: scale(1.3) translateY(-5px);
+    background-color: var(--laranja);
+    box-shadow: 0  0 25px var(--laranja);
+}
+
+#sobre{
+margin-top: 11rem;
+}
+
+#sobre h1, #projetos h1{
+    color: var(--azul);
+    text-align: center;
+    margin: 2rem;
+}
+
+#sobre p{
+    text-indent: 25px;
+    margin-top: 0.8rem;
+    font-size: 1.2em;
+    padding: 0 0.6rem 0 0.6rem;
+  
+}
+
+#sobre a{
+text-decoration: none;
+color: var(--laranja);
+}
+#sobre a:hover{
+    text-decoration: underline;
+}
+
+.linha-animada {
+  position: relative;
+  display: inline-block; 
+}
+
+.linha-animada::after {
+  content: '';
+  position: absolute;
+  width: 100%; 
+  height: 2.2px; 
+  bottom: 0;
+  left: 0;
+  background-color:var(--azul); 
+  transform: scaleX(0); 
+  transform-origin: bottom left;
+  transition: transform 0.5s ease-out; 
+}
+
+.linha-animada:hover::after {
+  transform: scaleX(1); 
+}
+.CV{
+    background-color: var(--laranja);
+    width: 120px;
+    height: 60px;
+    border-radius: 35%;
+    font-size: 1.2em;
+    cursor:  pointer;
+    border: 2px solid gray;
+    font-family: "Lilita One", sans-serif;
+    transition: transform 0.5s;
+}
+.CV:hover{
+    transform: scale(0.9);
+    box-shadow: 0px 0px 10px var(--laranja);
+}
+.tecnologias{
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+}
+
+
+.frontend,.backend,.tools{
+    background-color: rgba(22, 22, 22, 0.929);
+    min-width: 200px;
+    min-height: 300px;
+    padding: 1.2rem;
+    border-radius: 15px;
+    line-height: 4rem;
+    font-weight: bold;
+    color: white;
+    border: 2px solid var(--azul);
+    transition: transform 1.1s ease;
+    cursor: pointer;
+    text-align: left;
+   
+}    
+.frontend li, .backend li,.tools li{
+    list-style: none;
+}
+
+.frontend h2, .backend h2, .tools h2{
+    margin-top: -1rem;
+    color: var(--laranja);
+    text-align: center;
+}
+
+.frontend:hover, .backend:hover, .tools:hover{
+    box-shadow: 0px 0px 15px var(--azul);
+    transform: scale(1.05) translateY(-10px);
+}
+
+.frontend hr, .backend hr,.tools hr{
+    margin-bottom: 0.5rem;
+    border: 1px solid var(--azul);
+}
+
+
+.tech i{
+    font-size: 2rem;
+    color: var(--laranja);
+    
+}
+
+.tech span{
+    margin-left: 0.5rem;
+}
+
+#projetos{
+    margin-top: 5rem;
+  
+}
+#buttonHamburguer{
+    font-size: 1.8rem;
+    color: var(--laranja);
+    display: none;
+    cursor: pointer;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+}
+
+@media (max-width: 768px){
+
+    #home{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    
+    .home-texto h1{
+        font-size: 1.8em;
+        white-space: nowrap;
+    }
+    .home-texto h2{
+        font-size: 1.5em;
+    }
+    .home-texto p{
+        font-size: 1em;
+        text-align: left;
+    }
+    #sobre{
+        margin-top: 1em;
+        padding: 0.5rem;
+        text-align: center;
+    }
+    .tecnologias{
+        flex-flow: column nowrap;
+        align-items: center;
+      
+    }
+    
+    #foto-perfil{
+        width: 70vw;
+        height: 50vh;
+    }
+    #buttonHamburguer{
+        display: block;
+        order: 1;
+    }
+    .menu{
+        display: none;
+        height: 100px;
+        line-height: 1.7rem;
+     
+    }
+    .menu-ativo{
+        display: block;
+    }
+    nav{
+        padding: 1rem;
+    }
+}
+
+@media(min-width: 769px) and (max-width: 1024px){
+    #home{
+        flex-direction: column;
+        text-align: left;
+    }
+    .home-texto h1{
+        font-size: 2.8em;
+    }
+    #sobre{
+        padding: 0.5rem;
+        text-align: center;
+    }
+     #foto-perfil{
+        height: 53vh;
+    }
+}
+
+@media(min-width: 1025px) and (max-width: 1500px){
+    .home-texto h1{
+        font-size: 2.9em;
+    }
+
+}
