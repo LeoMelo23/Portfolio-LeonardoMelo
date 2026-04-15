@@ -144,6 +144,7 @@ h1{
 
 h1 span{
     color: var(--laranja);
+    text-shadow: 0px 0px 8px var(--laranja);
 }
 
 h2 span{
@@ -244,7 +245,7 @@ color: var(--laranja);
 
 .frontend,.backend,.tools{
     background-color: rgba(22, 22, 22, 0.929);
-    min-width: 200px;
+    min-width: 240px;
     min-height: 300px;
     padding: 1.2rem;
     border-radius: 15px;
@@ -358,20 +359,21 @@ color: var(--laranja);
 @media(min-width: 769px) and (max-width: 1024px){
     #home{
         flex-direction: column;
-        text-align: center;
     }
     .home-texto h1{
         font-size: 2.5em;
+       
     }
     .home-texto h2{
         font-size: 2em;
+      
     }
     .home-texto p{
         font-size: 1.1em;
+       
     }
     #sobre{
         padding: 0.5rem;
-        text-align: center;
     }
      #foto-perfil{
         height: 53vh;
