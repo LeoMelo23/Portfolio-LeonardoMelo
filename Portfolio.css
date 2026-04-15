@@ -321,7 +321,6 @@ color: var(--laranja);
     }
     .home-texto p{
         font-size: 1em;
-        text-align: left;
     }
     #sobre{
         margin-top: 1em;
