@@ -28,7 +28,7 @@ header a{
 }
 header a:hover{
     color: var(--azul);
-    text-shadow: 0px 0px 10px var(--azul);
+    text-shadow: 0px 0px 5px var(--azul);
   
 }
 
@@ -113,13 +113,20 @@ h1{
 
 .home-texto h2{
     font-size: 2em;
-    margin-bottom:1rem;
-    min-width: 250px;
+    margin-bottom: 1rem;
 }
-.home-texto h2::after{
+
+.animacao{
+    display: inline-block;
+    min-width: 305px; /* ajuste esse valor */
+}
+
+
+.home-texto .animacao::after{
     content: "";
     animation: profissao 6s infinite;
     color: var(--azul);
+    width: 100%;
 }
 
 @keyframes profissao{
@@ -175,7 +182,7 @@ h2 span{
 }
 
 #sobre{
-margin-top: 11rem;
+margin-top: 12rem;
 }
 
 #sobre h1, #projetos h1{
@@ -314,19 +321,21 @@ color: var(--laranja);
 
     
     .home-texto h1{
-        font-size: 1.5em;
-        white-space: nowrap;
+        font-size: 1.6em;
     }
     .home-texto h2{
         font-size: 1.3em;
+        
     }
     .home-texto p{
         font-size: 1em;
+        text-align: left;
+       
     }
     #sobre{
         margin-top: 1em;
         padding: 0.5rem;
-        text-align: center;
+      
     }
     .tecnologias{
         flex-flow: column nowrap;
