@@ -312,11 +312,11 @@ color: var(--laranja);
 
     
     .home-texto h1{
-        font-size: 1.8em;
+        font-size: 1.5em;
         white-space: nowrap;
     }
     .home-texto h2{
-        font-size: 1.5em;
+        font-size: 1.3em;
     }
     .home-texto p{
         font-size: 1em;
