@@ -10,12 +10,14 @@
 
 :root{
     --laranja: #FF9800;
-    --azul:#00CED1
+    --azul:#00CED1;
+    --preto: #000000;
+    --branco:#FFFFFF;
 }
 
 body{
-    background-color: black;
-    color: white;
+    background-color: var(--preto);
+    color: var(--branco);
     font-family: "Open Sans", sans-serif;
    
    
@@ -70,16 +72,17 @@ nav{
 
 #foto-perfil{
     width: 500px;
-    height: 55vh;
+    height: 60vh;
     border-radius: 50%;
-    box-shadow: 0px 0px 8px var(--laranja);
+    border: 1.5px solid var(--laranja);
     transition: transform 1s ease;
+    overflow: hidden;
 }
 
 
 #foto-perfil:hover{
 transform: translateY(-10px);
-box-shadow: 0px 0px 15px var(--laranja);
+box-shadow: 0px 0px 10px var(--laranja);
 
 
 }
@@ -87,7 +90,7 @@ box-shadow: 0px 0px 15px var(--laranja);
 header{
     position: sticky;
     top: 0;
-    background-color: black;
+    background-color: var(--preto);
     z-index: 1;
 }
 .home-texto{
@@ -114,12 +117,11 @@ h1{
 .home-texto h2{
     font-size: 2em;
     margin-bottom: 1rem;
-    text-align: left;
 }
 
 .animacao{
     display: inline-block;
-    min-width: 305px; /* ajuste esse valor */
+    min-width: 305px;
 }
 
 
@@ -176,7 +178,7 @@ h2 span{
 }
 
 .redes-sociais a:hover{
-    color: black;
+    color: var(--preto);
     transform: scale(1.3) translateY(-5px);
     background-color: var(--laranja);
     box-shadow: 0  0 25px var(--laranja);
@@ -184,6 +186,7 @@ h2 span{
 
 #sobre{
 margin-top: 12rem;
+padding: 0.5em;
 }
 
 #sobre h1, #projetos h1{
@@ -306,11 +309,21 @@ color: var(--laranja);
     color: var(--laranja);
     display: none;
     cursor: pointer;
+    order: 1;
 }
 
 ::-webkit-scrollbar {
     width: 0px;
     height: 0px;
+}
+#sol{
+   color: var(--laranja);
+    cursor: pointer;
+    font-size: 1.8rem;
+}
+#sol:hover{
+    text-shadow: 0px 0px 8px var(--laranja);
+   
 }
 
 @media (max-width: 768px){
@@ -348,17 +361,14 @@ color: var(--laranja);
     
     #foto-perfil{
         width: 70vw;
-        height: auto;
     }
     #buttonHamburguer{
         display: block;
-        order: 1;
     }
     .menu{
         display: none;
         height: 100px;
-        line-height: 1.7rem;
-     
+        line-height: 1.7rem;     
     }
     .menu-ativo{
         display: block;
@@ -371,6 +381,7 @@ color: var(--laranja);
 @media(min-width: 769px) and (max-width: 1024px){
     #home{
         flex-direction: column;
+        text-align: center;
     }
     .home-texto h1{
         font-size: 2.5em;
@@ -388,7 +399,7 @@ color: var(--laranja);
         padding: 0.5rem;
     }
      #foto-perfil{
-        height: auto;
+        height: 50vw;
     }
 }
 
