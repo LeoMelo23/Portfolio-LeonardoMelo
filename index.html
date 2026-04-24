@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Portfolio.css">
     <link rel="shortcut icon" href="imagens/logo_LM (1).png" type="image/x-icon">
-    <title>Portfólio - Leonardo Melo</title>
+    <title>Portfólio | Leonardo Melo</title>
 </head>
 <script src="https://kit.fontawesome.com/334b29d687.js" crossorigin="anonymous"></script>
 <body>
@@ -17,11 +17,11 @@
 
                 <i class="fa-solid fa-bars" id="buttonHamburguer"></i>
 
-                <ul class="menu">
-                    <li><a href="#home" class="linha-animada">Home</a></li>
-                    <li><a href="#sobre" class="linha-animada">Sobre</a></li>
-                    <li><a href="#projetos" class="linha-animada">Projetos</a></li>
-                    <li><i class="fa-solid fa-sun" id="sol"></i></li>
+                <ul class="menu" id="menu">
+                    <li class="linha-animada"><a href="#home" class="link">Home</a></li>
+                    <li class="linha-animada"><a href="#sobre" class="link">Sobre</a></li>
+                    <li class="linha-animada"><a href="#projetos" class="link">Projetos</a></li>
+                    <li><a href="##" class="link"><i class="fa-solid fa-sun" id="botao-tema"></i></a></li>
                 </ul>
             </nav>
         </header>
@@ -118,16 +118,65 @@ Hoje, meu foco principal está no Front-End, onde venho desenvolvendo minhas hab
 
     <h1>Projetos</h1>
 
-    <div class="ContainerProjetos">
+    <h2>Destaques <hr></h2>
 
-        <div class="projetosCards"></div>
+    <div id="Projetos-Destaques">
+
+         <div class="projetosCards">
+
+         <div class="cards-img"><img src="imagens/projeto-03-android.jpg" alt=""></div>
+
+         <div class="cards-info">
+           2026 <button class="VerDetalhes">Ver Detalhes</button>
+         </div>
+        </div> 
+
 
     </div>
 
+    <h2>Todos os Projetos <hr></h2>
+    <div id="Projetos-container">
+
+        <!-- PROJETO 1 -->
+
+        <div class="projetosCards">
+
+         <div class="cards-img"><img src="imagens/projeto-03-android.jpg" alt=""></div>
+
+         <div class="cards-info">
+           2026 <button class="VerDetalhes">Ver Detalhes</button>
+         </div>
+        </div> 
+
+        <!-- PROJETO 2 -->
+
+         <div class="projetosCards">
+
+         <div class="cards-img"><img src="imagens/projeto-02-cordel.jpg" alt=""></div>
+
+         <div class="cards-info">
+           2026 <button class="VerDetalhes">Ver Detalhes</button>
+         </div>
+        </div> 
+
+        <!-- PROJETO 3 -->
+
+         <div class="projetosCards">
+
+         <div class="cards-img"><img src="imagens/CalculadoraIMC.jpg" alt=""></div>
+
+         <div class="cards-info">
+           2025 <button class="VerDetalhes">Ver Detalhes</button>
+         </div>
+        </div> 
+
+
+
+    </div>
 </section>
 
     </main>
-    
+  
+<script src="Portfolio.js"></script>    
 </body>
-<script src="Portfolio.js"></script>
 </html>
