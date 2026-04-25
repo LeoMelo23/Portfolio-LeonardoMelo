@@ -163,7 +163,7 @@ h1{
 
 h1 span{
     color: var(--laranja);
-    text-shadow: 0px 0px 8px var(--laranja);
+    text-shadow: 4px 0px 8px var(--laranja);
 }
 
 h2 span{
