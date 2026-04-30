@@ -27,7 +27,8 @@ body{
     background-color: var(--corFundo);
     color: var(--corTexto);
     font-family: "Open Sans", sans-serif;
-    transition: background-color 1s ease, color 1s ease;
+    transition: all 1s ease;
+    scroll-behavior: smooth;
 }
 header{
      transition: background-color 1s ease;
@@ -37,7 +38,7 @@ header a{
     color: var(--laranja);
     
 }
-header a:hover{
+header .link:hover{
     color: var(--azul);
     text-shadow: 0px 0px 5px var(--azul);
   
@@ -51,7 +52,7 @@ header li{
 
 #logo{
     max-width: 100px;
-    transition: transform 1s ease;
+    transition: transform 1s ease-in-out;
     cursor:pointer;
     
 }
@@ -84,7 +85,7 @@ nav{
     height: 60vh;
     border-radius: 50%;
     border: 1.5px solid var(--laranja);
-    transition: transform 1s ease;
+    transition: transform 1s ease-in-out;
     overflow: hidden;
 }
 
@@ -286,18 +287,16 @@ color: var(--laranja);
     margin-top: -1rem;
     color: var(--laranja);
     text-align: center;
+    border-bottom: 2px solid var(--azul);
 }
 
 .frontend:hover, .backend:hover, .tools:hover{
     box-shadow: 0px 0px 15px var(--azul);
     transform: scale(1.05) translateY(-10px);
 }
-
-.frontend hr, .backend hr,.tools hr{
-    margin-bottom: 0.5rem;
-    border: 1px solid var(--azul);
+.tech{
+    margin-top: 5px;
 }
-
 
 .tech i{
     font-size: 2rem;
@@ -371,6 +370,7 @@ color: var(--laranja);
 .cards-img{
     width: 100%;
     height: 100%;
+    
 }
 .cards-info{
     display: flex;
@@ -381,6 +381,13 @@ color: var(--laranja);
     width: 80%;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+    transform: translateY(-12px);
+}
+.projetosCards:hover .cards-info{
+    opacity: 1;
+    transform: translateY(0);
 }
 .VerDetalhes{
     padding: 5px;
@@ -392,6 +399,15 @@ color: var(--laranja);
     border: none;
     cursor: pointer;
 }
+.link {
+  padding: 8px;
+  border-radius: 4px;
+  transition: background-color 0.5s ease;
+}
+
+.link.ativo {
+  background-color: rgba(211, 211, 211, 0.151);
+}
 ::-webkit-scrollbar {
     width: 6px;
 }
@@ -402,7 +418,6 @@ color: var(--laranja);
     background: var(--laranja);
     border-radius: 3px;
 }
-
 @media (max-width: 768px){
 
     #home{
@@ -454,6 +469,22 @@ color: var(--laranja);
     nav{
         padding: 1rem;
     }
+     ::-webkit-scrollbar{
+        width: 0;
+        height: 0;
+    }
+    #Projetos-container,#Projetos-Destaques{
+        flex-flow: column wrap;
+        align-items: center;
+    }
+    .projetosCards{
+        width: 75vw;
+    }
+    .cards-info{
+        width: 100%;
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @media(min-width: 769px) and (max-width: 1024px){
@@ -479,10 +510,19 @@ color: var(--laranja);
      #foto-perfil{
         height: 50vw;
     }
+
+    ::-webkit-scrollbar{
+        width: 0;
+        height: 0;
+    }
 }
 
 @media(min-width: 1025px) and (max-width: 1500px){
     .home-texto h1{
         font-size: 2.9em;
+    }
+    ::-webkit-scrollbar{
+        width: 0;
+        height: 0;
     }
 }
