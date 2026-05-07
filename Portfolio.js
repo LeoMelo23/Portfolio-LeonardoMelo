@@ -48,22 +48,3 @@ navLinks.forEach(link => {
       }
     });
 });
-
-const sections = document.querySelectorAll('section')
-const links = document.querySelectorAll('.link')
-
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      // remove ativo de todos
-      links.forEach(link => link.classList.remove('ativo'))
-
-      // adiciona ativo no link correspondente à seção
-      const id = entry.target.id
-      const linkAtivo = document.querySelector(`a[href="#${id}"]`)
-      linkAtivo.classList.add('ativo')
-    }
-  })
-}, { threshold: 0.5 }) // 0.5 = quando 50% da seção estiver visível
-
-sections.forEach(section => observer.observe(section))
