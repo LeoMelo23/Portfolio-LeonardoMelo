@@ -159,7 +159,7 @@ h1{
     line-height: 2.5rem;
 }
 
-h1 span{
+.nome_span{
     color: var(--laranja);
     text-shadow: 4px 0px 8px var(--laranja);
 }
@@ -196,7 +196,7 @@ margin-top: 12rem;
 padding: 0.5em;
 }
 
-#sobre h1, #projetos h1{
+.titulo_section{
     color: var(--azul);
     text-align: center;
     margin: 2rem;
@@ -257,6 +257,7 @@ color: var(--laranja);
 .tecnologias{
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 3rem;
 }
 
@@ -271,9 +272,9 @@ color: var(--laranja);
     font-weight: bold;
     color: white;
     border: 2px solid var(--azul);
-    transition: transform 1.1s ease;
     cursor: pointer;
     text-align: left;
+     transition: transform 1s ease-in-out;
    
 }    
 .frontend li, .backend li,.tools li{
@@ -332,8 +333,8 @@ color: var(--laranja);
     gap: 2rem;
 }
 #Projetos-container{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: flex;
+    flex-wrap: wrap;
     gap: 2rem ;
     padding: 1rem;
 }
@@ -386,7 +387,7 @@ color: var(--laranja);
 }
 .projetosCards:hover .cards-info{
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(-1px);
     
 }
 .VerDetalhes{
@@ -398,6 +399,85 @@ color: var(--laranja);
     color: var(--preto);
     border: none;
     cursor: pointer;
+}
+
+
+.popover_container{
+   margin: auto;
+   border: none;
+   border-radius: 10px;
+   background-color:  rgba(22, 22, 22, 0.929);
+   color: white;
+   padding: 2rem;
+   max-width: 60vw;
+}
+.header_popover{
+    display: grid;
+    grid-template-columns: 1fr 50px;
+}
+
+.popover_container h1{
+   color: var(--corSecundaria);
+   text-align: center;
+   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+   letter-spacing: 1px;
+   font-size: 2.5rem;
+   margin-bottom: 2rem;
+}
+.button_cancelar{
+    cursor: pointer;
+    font-size: 2rem;
+    color: var(--cinza);
+    background-color: transparent;
+    border: none;
+   margin-top: -0.8rem;
+    align-self: start;
+    transition: color 0.4s ease-in-out;
+}
+.button_cancelar:hover{
+    color: var(--corPrincipal);
+}
+.texto_popover{
+    margin-bottom: 2rem;
+}
+.texto_popover_container{
+    margin-bottom: 2rem;
+    line-height: 2;
+}
+.paragrafo_destaque{
+    margin: 1rem 0;
+    color: var(--azul);
+}
+.texto_principal_popover{
+    margin: 1rem 0;
+}
+.lista_popover li::marker{
+    color: var(--azul);
+}
+.lista_popover{
+    margin-left: 2rem;
+}
+.links_container{
+    display: flex;
+    gap: 1.5rem;
+}
+.links_popover{
+    color: white;
+    text-decoration: none;
+    background-color: #808080;
+    padding: 0.5rem;
+    border-radius: 20px;
+    letter-spacing: 1px;
+    font-size: 0.8rem;
+    transition: all 0.3s ease-in-out;
+}
+.links_popover:hover{
+    color: var(--corSecundaria);
+    background-color: var(--preto);
+}
+::backdrop{
+    background-color: #000000be;
+    backdrop-filter: blur(4px);
 }
 
 ::-webkit-scrollbar {
@@ -465,7 +545,7 @@ color: var(--laranja);
         width: 0;
         height: 0;
     }
-    #Projetos-container,#Projetos-Destaques{
+    #Projetos-Destaques,#Projetos-container{
         flex-flow: column wrap;
         align-items: center;
     }
