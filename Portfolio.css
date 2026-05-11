@@ -411,7 +411,9 @@ color: var(--laranja);
    background-color:  rgba(22, 22, 22, 0.929);
    color: white;
    padding: 2rem;
-   max-width: 60vw;
+   max-width: 90vw;
+   width: 60vw;
+  
 }
 .header_popover{
     display: grid;
@@ -439,7 +441,7 @@ color: var(--laranja);
 .button_cancelar:hover{
     color: var(--corPrincipal);
 }
-.texto_popover{
+.texto_descricao{
     margin-bottom: 2rem;
 }
 .texto_popover_container{
@@ -450,7 +452,7 @@ color: var(--laranja);
     margin: 1rem 0;
     color: var(--azul);
 }
-.texto_principal_popover{
+.paragrafo_principal_popover{
     margin: 1rem 0;
 }
 .lista_popover li::marker{
@@ -555,6 +557,11 @@ color: var(--laranja);
         width: 100%;
         opacity: 1;
         transform: translateY(0);
+    }
+    .popover_container{
+       width: 100vw;
+       height: fit-content;
+       max-height: 90vh;
     }
 }
 
