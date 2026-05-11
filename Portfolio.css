@@ -316,6 +316,8 @@ color: var(--laranja);
     display: none;
     cursor: pointer;
     order: 1;
+    background-color: transparent;
+    border: none;
 }
 
 #botao-tema{
@@ -477,9 +479,8 @@ color: var(--laranja);
 }
 ::backdrop{
     background-color: #000000be;
-    backdrop-filter: blur(4px);
+    backdrop-filter: blur(5px);
 }
-
 ::-webkit-scrollbar {
     width: 6px;
 }
@@ -499,8 +500,6 @@ color: var(--laranja);
     .home-texto{
     margin: 2rem 1rem;
 }
-
-    
     .home-texto h1{
         font-size: 1.5em;
     }
@@ -525,7 +524,7 @@ color: var(--laranja);
     
     #foto-perfil{
         width: 70vw;
-        height: 60vh;
+        max-height: 50vh;
     }
     #buttonHamburguer{
         display: block;

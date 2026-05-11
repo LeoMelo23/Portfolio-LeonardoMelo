@@ -48,3 +48,18 @@ navLinks.forEach(link => {
       }
     });
 });
+
+const projetos = {
+  '.imagem_ModaOra': 'ModaOra',
+  '.imagem_aprenser': 'Aprenser',
+  '.imagem_Ciox': 'ciox',
+  '.imagem_Cordel': 'cordel',
+  '.imagem_Android': 'Android',
+  '.imagem_IMC' : 'IMC',
+}
+
+Object.entries(projetos).forEach(([classe, id]) => {
+  document.querySelector(classe).addEventListener('click', () => {
+    document.getElementById(id).showPopover()
+  })
+})
