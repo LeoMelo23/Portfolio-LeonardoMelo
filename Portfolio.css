@@ -30,30 +30,27 @@ body{
     transition: all 1s ease;
     scroll-behavior: smooth;
 }
-.Cabecalho{
+.cabecalho{
      transition: background-color 1s ease;
      position: sticky;
      top: 0;
      background-color: var(--corFundo);
      z-index: 1;
-}
-.Cabecalho a{
+
+     a{
     text-decoration: none;
     color: var(--laranja);
-    
-}
-.Cabecalho .link:hover{
+     }
+     .link:hover{
     color: var(--azul);
     text-shadow: 0px 0px 5px var(--azul);
-  
-}
-
-.Cabecalho li{
+    }
+    li{
     list-style: none;
     font-size: 1.5em;
     font-family: "Lilita One", sans-serif;
+    }
 }
-
 #logo{
     max-width: 100px;
     transition: transform 1s ease-in-out;
@@ -81,9 +78,6 @@ nav{
     gap: 2.5rem;
     letter-spacing: 2px;
 }
-
-
-
 #foto-perfil{
     width: 500px;
     height: 60vh;
@@ -92,8 +86,6 @@ nav{
     transition: transform 1s ease-in-out;
     overflow: hidden;
 }
-
-
 #foto-perfil:hover{
 transform: translateY(-10px);
 box-shadow: 0px 0px 10px var(--laranja);
@@ -103,42 +95,41 @@ box-shadow: 0px 0px 10px var(--laranja);
 .home-texto{
  letter-spacing: 1px;
  margin: 3em 5rem;
-}
 
+
+    h1{
+    font-size: 3.3em;
+    white-space: nowrap;
+    margin-bottom: 2.5rem;
+    }
+
+    h2{
+    font-size: 2em;
+    margin-bottom: 1rem;
+    }
+    p{
+    font-size: 1.3em;
+    line-height: 2.5rem;
+    }
+}
 #home{
     display: flex;
     align-items: center;
     margin: 4rem 4rem;
-   
-}
-.home-texto h1{
-    font-size: 3.3em;
-    white-space: nowrap;
-    margin-bottom: 2.5rem;
 }
 h1{
      font-family: "Rock Salt", cursive;
 }
-
-
-.home-texto h2{
-    font-size: 2em;
-    margin-bottom: 1rem;
-}
-
 .animacao{
     display: inline-block;
     min-width: 305px;
 }
-
-
 .home-texto .animacao::after{
     content: "";
     animation: profissao 6s infinite;
     color: var(--azul);
     width: 100%;
 }
-
 @keyframes profissao{
     0%,25%{
         content:"Estudante de Matemática"
@@ -154,11 +145,6 @@ h1{
          content: "Desenvolvedor FullStack Jr";
     }
 }
-.home-texto p{
-    font-size: 1.3em;
-    line-height: 2.5rem;
-}
-
 .nome_span{
     color: var(--laranja);
     text-shadow: 4px 0px 8px var(--laranja);
@@ -194,6 +180,20 @@ h2 span{
 #sobre{
 margin-top: 12rem;
 padding: 0.5em;
+
+    p{
+    text-indent: 15px;
+    margin-top: 0.8rem;
+    font-size: 1.2em;
+    padding: 0 0.6rem 0 0.6rem;
+    }
+    a{
+    text-decoration: none;
+    color: var(--laranja);
+    }
+    a:hover{
+        text-decoration: underline;
+    }
 }
 
 .titulo_section{
@@ -201,23 +201,6 @@ padding: 0.5em;
     text-align: center;
     margin: 2rem;
 }
-
-#sobre p{
-    text-indent: 15px;
-    margin-top: 0.8rem;
-    font-size: 1.2em;
-    padding: 0 0.6rem 0 0.6rem;
-  
-}
-
-#sobre a{
-text-decoration: none;
-color: var(--laranja);
-}
-#sobre a:hover{
-    text-decoration: underline;
-}
-
 .linha-animada {
   position: relative;
   display: inline-block; 
@@ -276,18 +259,16 @@ color: var(--laranja);
     text-align: left;
      transition: transform 1s ease-in-out;
    
-}    
-.frontend li, .backend li,.tools li{
-    list-style: none;
-}
-
-.frontend h2, .backend h2, .tools h2{
+     li{
+        list-style: none;
+     }
+     h2{
     margin-top: -1rem;
     color: var(--laranja);
     text-align: center;
     border-bottom: 2px solid var(--azul);
-}
-
+    }
+}    
 .frontend:hover, .backend:hover, .tools:hover{
     box-shadow: 0px 0px 15px var(--azul);
     transform: scale(1.05) translateY(-10px);
@@ -316,7 +297,7 @@ color: var(--laranja);
     display: none;
     cursor: pointer;
     order: 1;
-    background-color: transparent;
+    background:none;
     border: none;
 }
 
@@ -344,12 +325,12 @@ color: var(--laranja);
     color: var(--laranja);
     margin: 5rem 0 2rem 3rem;
     width: fit-content;
-    
-}
-#projetos h2 hr{
+
+    hr{
     width: 75%;
     border: 1.5px solid var(--laranja);
     margin-top: 0.1em;
+    }   
 }
 .projetosCards{
     width: 30vw;
@@ -367,7 +348,7 @@ color: var(--laranja);
 .cards-img img{
     width: 100%;
     height: 100%;
-   border-radius: 15px 15px 15px 0 ;
+    border-radius: 15px 15px 15px 0;
 }
 .cards-img{
     width: 100%;
@@ -402,8 +383,6 @@ color: var(--laranja);
     border: none;
     cursor: pointer;
 }
-
-
 .popover_container{
    margin: auto;
    border: none;
@@ -413,7 +392,7 @@ color: var(--laranja);
    padding: 2rem;
    max-width: 90vw;
    width: 60vw;
-  
+   height: fit-content;
 }
 .header_popover{
     display: grid;
@@ -552,6 +531,9 @@ color: var(--laranja);
     }
     .projetosCards{
         width: 75vw;
+    }
+    .cards-img img{
+        border-radius: 15px 15px 0 0;
     }
     .cards-info{
         width: 100%;
