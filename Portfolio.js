@@ -53,7 +53,7 @@ const projetos = {
   '.imagem_ModaOra': 'ModaOra',
   '.imagem_aprenser': 'Aprenser',
   '.imagem_Ciox': 'ciox',
-  '.imagem_Cordel': 'cordel',
+  '.imagem_serDigital': 'serDigital',
   '.imagem_Android': 'Android',
   '.imagem_IMC' : 'IMC',
 }
