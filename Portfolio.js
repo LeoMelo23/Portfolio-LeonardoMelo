@@ -56,6 +56,7 @@ const projetos = {
   '.imagem_serDigital': 'serDigital',
   '.imagem_Android': 'Android',
   '.imagem_IMC' : 'IMC',
+  '.imagem_CloneUber':'CloneUber'
 }
 
 Object.entries(projetos).forEach(([classe, id]) => {

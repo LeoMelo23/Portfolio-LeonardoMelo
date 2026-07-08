@@ -124,12 +124,14 @@ h1{
 .animacao{
     display: inline-block;
     min-width: 305px;
+   
 }
 .home-texto .animacao::after{
     content: "";
     animation: profissao 5s infinite;
     color: var(--azul);
     width: 100%;
+    
 }
 @keyframes profissao{
     0%,25%{
@@ -561,7 +563,7 @@ padding: 1em;
     }
 }
 
-@media(min-width: 769px) and (max-width: 1024px){
+@media(min-width: 769px) and (max-width: 1334px){
     #home{
         flex-direction: column;
         text-align: center;
