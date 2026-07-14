@@ -1,9 +1,4 @@
-let menuButton = document.querySelector("#buttonHamburguer");
-let menu = document.querySelector(".menu")
 
-menuButton.addEventListener("click",function(){
-    menu.classList.toggle("menu-ativo");
-})
 
 const botao = document.querySelector("#botao-tema");
 const body = document.body;
@@ -64,3 +59,31 @@ Object.entries(projetos).forEach(([classe, id]) => {
     document.getElementById(id).showPopover()
   })
 })
+
+const btnMenu = document.getElementById("buttonHamburguer");
+const btnClose = document.getElementById("btn-close");
+const menu = document.getElementById("menu-mobile");
+const overlay = document.querySelector("#overlay")
+
+
+btnMenu.onclick = () => {
+    menu.classList.add("active");
+    overlay.classList.add("active");
+};
+
+function fecharMenu(){
+    menu.classList.remove("active");
+    overlay.classList.remove("active");
+}
+
+btnClose.onclick = fecharMenu;
+overlay.onclick = fecharMenu;
+
+const media = window.matchMedia("(min-width: 768px)");
+
+media.addEventListener("change", (e) => {
+    if (e.matches) {
+        menu.classList.toggle("active");
+        overlay.classList.toggle("active");
+    }
+});

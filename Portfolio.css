@@ -491,6 +491,70 @@ padding: 1em;
 }
 
 
+
+/* Menu */
+
+#menu-mobile{
+    position:fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background:rgba(0, 0, 0, 0.940);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    gap:2rem;
+    transform:translateX(100%);
+    transition:.4s ease;
+}
+
+#overlay{
+    position:fixed;
+    inset:0;
+    background:rgba(0, 0, 0, 0.445);
+    opacity:0;
+    visibility:hidden;
+    transition:.3s;
+}
+
+#menu-mobile a{
+    text-decoration:none;
+    color:var(--corPrincipal);
+    font-size:2rem;
+    transition: color 0.3s ease;
+}
+
+#menu-mobile a:hover{
+    color: var(--corSecundaria);
+}
+
+#btn-close{
+    position:absolute;
+    top:30px;
+    right:30px;
+    border: none;
+    background-color: transparent;
+    color: var(--laranja);
+    font-size: 2.5rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+#btn-close:hover{
+    color: var(--corSecundaria);
+}
+
+/* Classes que o JS adiciona */
+
+#menu-mobile.active{
+    transform:translateX(0);
+}
+#overlay.active{
+    opacity:1;
+    visibility:visible;
+}
 @keyframes cascata{
     to{opacity: 1; transform: translateX(0);}
 }
@@ -534,9 +598,7 @@ padding: 1em;
     .menu{
         display: none;
     }
-    .menu-ativo{
-        display: block;
-    }
+    
     nav{
         padding: 1rem;
     }
